@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header p {
+  color: blue;
+  margin: 0 0 0 15px;
+}
+
+.header__burger-menu {
+  /*     position: fixed; */
+  position: relative;
+  top: 5px;
+  right: 32px;
+  padding: 4px 5px 4px 0;
+  display: flex;
+  width: 136px;
+  height: 54px;
+  background: #b8b8d4;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+.header__burger-menu.is-active {
+  width: 280px;
+}

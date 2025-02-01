@@ -1,0 +1,46 @@
+//  Fonts
+$montserrat: "Montserrat", "Arial", sans-serif;
+
+// Base colors
+$base-primery: #2d383f;
+$base-additional: #0266c1;
+$base-additional-opacity: rgba(2, 102, 193, 0.1);
+$base-white: rgb(255, 255, 255);
+$base-black: rgb(0, 0, 0);
+
+// Other colors
+$color-disabled: #999999;
+$color-elephant: #657792;
+$color-resolution-blue: rgb(28, 51, 116);
+$color-resolution-blue-10: rgba(28, 51, 116, 0.1);
+$color-transparent: rgba(255, 255, 255, 0);
+$color-torch-red: #ff121f;
+$color-grey: rgba(45, 56, 63, 0.3);
+$color-whisper: #e8e8e8;
+$color-bg-ok: #ff9800;
+$color-bg-reddit: #ff5722;
+$color-active: rgb(28, 51, 116);
+
+// Conditions
+$link-disabled-blue: rgb(153, 153, 153);
+$link-active-blue: rgb(28, 51, 116);
+$number-hover-blue: rgba(255, 255, 255, 0.5);
+$btn-links-conditions: rgb(28, 51, 116);
+
+
+// overlay colors
+$bg-color-hero: linear-gradient(175deg, rgb(121 154 188) 49%, rgb(109 80 35) 121%);
+$color-overlay-slider-hero: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 13%, rgba(15, 20, 41, 0) 96%);
+$color-overlay-slider-card: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 22%, rgba(0, 0, 0, 0) 60%);
+
+// Animation
+$tf-default: ease-in-out;
+$trans-default: 0.2s $tf-default;
+$border-width: 2px solid;
+
+// Width-Viewports
+$vp-320: 320px;
+$vp-767: 767px;
+$vp-768: 768px;
+$vp-1439: 1439px;
+$vp-1440: 1440px;

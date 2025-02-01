@@ -1,0 +1,73 @@
+//  reset default styles (ul)
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+}
+
+// Viewports
+@mixin vp-767 {
+  @media (max-width: $vp-767) {
+    @content;
+  }
+}
+
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
+    @content;
+  }
+}
+
+@mixin vp-1439 {
+  @media (max-width: $vp-1439) {
+    @content;
+  }
+}
+
+@mixin vp-1440 {
+  @media (min-width: $vp-1440) {
+    @content;
+  }
+}
+
+// Burger menu contents
+@mixin burger-contents {
+  position: relative;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: $base-white;
+  cursor: pointer;
+}
+
+@mixin focus {
+  border: none;
+  outline: unset;
+  background: transparent;
+}
+
+@mixin hover-link {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: 2px;
+  height: 1px;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  transition: 0.25s;
+}
+
+// transition
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin disabled {
+  &:disabled,
+  &.is-disabled {
+    @content;
+  }
+}
