@@ -1,0 +1,148 @@
+.button {
+  @include disabled;
+  font-family: $manrope;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  margin: 0;
+  letter-spacing: 2%;
+  color: $base-primery;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: $trans-default;
+
+  &:hover,
+  &:focus-visible {
+    color: $base-white;
+    background: $base-primery;
+    outline: unset;
+
+    .header__menu-wrapper {
+      background-color: $base-white;
+    }
+
+    span {
+      /* если используется реализация с svg, то вместо span указать svg*/
+      background-color: $base-primery;
+    }
+  }
+
+  &:active {
+    background-color: $base-primery;
+    color: $base-white;
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    color: $color-disabled;
+    pointer-events: none;
+    cursor: default;
+    background: transparent;
+    border: 1px solid $color-disabled;
+
+    .header__menu-wrapper {
+      background-color: $color-disabled;
+    }
+
+    span {
+      /* если используется реализация с svg, то вместо span указать svg*/
+      background-color: $base-white;
+      opacity: 0.8;
+    }
+  }
+
+  .header__menu-wrapper {
+    background-color: $base-primery;
+  }
+
+  span {
+    /* если используется реализация с svg, то вместо span указать svg*/
+    background-color: $base-white;
+  }
+
+}
+
+.button.is-active {
+  width: 280px;
+  color: $base-white;
+  background: $base-primery;
+
+  .header__menu-title {
+    color: $base-white;
+  }
+
+  .header__menu-wrapper {
+    background: $base-white;
+  }
+
+  span {
+    background-color: $base-primery;
+  }
+
+  &:hover {
+    color: $base-primery;
+    background: $base-white;
+    outline: unset;
+
+    .header__menu-wrapper {
+      background-color: $base-primery;
+    }
+
+    span {
+      /* если используется реализация с svg, то вместо span указать svg*/
+      background-color: $base-white;
+    }
+  }
+
+  &:focus-visible {
+    color: $base-primery;
+    background: $base-white;
+    outline: unset;
+
+    .header__menu-wrapper {
+      background-color: $base-primery;
+    }
+
+    span {
+      /* если используется реализация с svg, то вместо span указать svg*/
+      background-color: $base-white;
+    }
+  }
+
+  &:active {
+    background-color: $base-white;
+    color: $base-primery;
+    opacity: 0.8;
+
+    .header__menu-wrapper {
+      background-color: $base-primery;
+    }
+
+    span {
+      /* если используется реализация с svg, то вместо span указать svg*/
+      background-color: $base-white;
+    }
+  }
+
+  &:disabled {
+    color: $color-disabled;
+    pointer-events: none;
+    cursor: default;
+    border: 1px solid $color-disabled;
+    background: $base-primery;
+
+    .header__menu-wrapper {
+      background: $color-disabled;
+    }
+
+    span {
+      /* если используется реализация с svg, то вместо span указать svg*/
+      background-color: $base-white;
+      opacity: 0.8;
+    }
+  }
+}

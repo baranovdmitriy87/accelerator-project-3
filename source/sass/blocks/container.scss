@@ -1,0 +1,15 @@
+.container {
+  width: $vp-320;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include vp-768 {
+    width: $vp-768;
+    padding: 0 45px;
+  }
+
+  @include vp-1440 {
+    width: $vp-1440;
+    padding: 0 120px;
+  }
+}
