@@ -63,7 +63,8 @@
 // transition
 @mixin trans-burger-close {
   transform: translateX(-50%) translateY(0);
-  transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s,
+  transition:
+    top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s,
     transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
 }
 
@@ -73,7 +74,6 @@
 // }
 
 @mixin disabled {
-
   &:disabled,
   &.is-disabled {
     @content;

@@ -26,69 +26,99 @@
 
   <!-- header -->
 
-  <div class="header container">
-    <button class="header__menu-button button" id="burger-link" href="#nav">
+  <header class="header container">
+    <div class="header__logo-wrapper">
+      <svg class="header__logo-icon" width="52" height="52" viewBox="0 0 52 52" role="img" focusable="false"
+        aria-hidden="true">
+        <use href="/__spritemap#sprite-logo"></use>
+      </svg>
+    </div>
+    <button class="header__menu-button button" type="button" id="burger-link">
       МЕНЮ
-      <div class="header__menu-wrapper">
-        <div class="header__menu">
+      <span class="header__menu-wrapper">
+        <span class="header__menu">
           <span></span>
           <span></span>
           <span></span>
-        </div>
-      </div>
+        </span>
+      </span>
     </button>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Menu item 1</a>
+          <a class="header__nav-link" href="#">О проекте</a>
+        </li>
+        <li class="header__nav-item" data-has-children="true">
+          <a class="header__nav-link" href="#" aria-expanded="false">Программы
+            <svg class="header__nav-link-icon" width="12" height="7" viewBox="0 0 12 7" role="img" focusable="false"
+              aria-hidden="true">
+              <use href="/__spritemap#sprite-arrow-nav-menu"></use>
+            </svg>
+          </a>
+          <ul class="header__nav-submenu-list">
+            <li class="header__nav-submenu-item">
+              <a class="header__nav-submenu-link" href="">Стажировки</a>
+            </li>
+            <li class="header__nav-submenu-item">
+              <a class="header__nav-submenu-link" href="">Волонтёрство</a>
+            </li>
+            <li class="header__nav-submenu-item">
+              <a class="header__nav-submenu-link" href="">Учёба</a>
+            </li>
+            <li class="header__nav-submenu-item">
+              <a class="header__nav-submenu-link" href="">Религия</a>
+            </li>
+          </ul>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Another menu item</a>
+          <a class="header__nav-link" href="#">Как поехать</a>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">One last menu item</a>
+          <a class="header__nav-link" href="#">Отзывы</a>
+        </li>
+        <li class="header__nav-item" data-has-children="true">
+          <a class="header__nav-link" href="#" aria-expanded="false">Новости
+            <svg class="header__nav-link-icon" width="12" height="7" viewBox="0 0 12 7" role="img" focusable="false"
+              aria-hidden="true">
+              <use href="/__spritemap#sprite-arrow-nav-menu"></use>
+            </svg>
+          </a>
+          <ul class="header__nav-submenu-list">
+            <li class="header__nav-submenu-item">
+              <a class="header__nav-submenu-link" href="">Общее</a>
+            </li>
+            <li class="header__nav-submenu-item">
+              <a class="header__nav-submenu-link" href="">Стажировки</a>
+            </li>
+            <li class="header__nav-submenu-item">
+              <a class="header__nav-submenu-link" href="">Волонтёрство</a>
+            </li>
+            <li class="header__nav-submenu-item">
+              <a class="header__nav-submenu-link" href="">Карьера</a>
+            </li>
+            <li class="header__nav-submenu-item">
+              <a class="header__nav-submenu-link" href="">Путешествия</a>
+            </li>
+          </ul>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#">Контакты</a>
         </li>
       </ul>
     </nav>
-  </div>
+  </header>
+
+  <section class="overlay">
+  </section>
 
 
 
-  <!-- <section class="overlay">
-  </section> -->
-
-  <!-- <header class="header container">
-    <h1 class="visually-hidden">Intership. Глобальный профессиональный опыт обучения за рубежом.</h1>
-    <div class="header__burger-menu burger-menu">
-      <p class="header__nav-title">МЕНЮ</p>
-      <div class="header__nav-button-wrapper">
-        <button class="header__nav-button button">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <nav class="header__nav-nav container">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Menu item 1</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Another menu item</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">One last menu item</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header> -->
 
 
   <!-- main -->
   <main>
     <section data-test="hero">
-      <div cla>
+      <div>
 
       </div>
     </section>

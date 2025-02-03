@@ -2,17 +2,18 @@
 $manrope: "Manrope", "Arial", sans-serif;
 
 // Base colors
-$base-primery: #316DC2;
+$base-primery: #316dc2;
 $base-white: rgb(255, 255, 255);
-$base-bg-main: #F0EFE9;
+$base-bg-main: #f0efe9;
 $base-additional-opacity: rgba(2, 102, 193, 0.1);
 $base-black: rgb(0, 0, 0);
 
 // Other colors
 $color-text: #484848;
-$color-error: #FF5E66;
+$color-text-link: #f0efe9dc;
+$color-error: #ff5e66;
 $color-active: #275699;
-$color-disabled: #A9AFB7;
+$color-disabled: #a9afb7;
 $color-bg-ok: #ff9800;
 $color-bg-reddit: #ff5722;
 
@@ -22,7 +23,7 @@ $color-light-grey: rgba(13, 29, 51, 0.4);
 
 // Animation
 $tf-default: ease-in-out;
-$trans-default:all 0.2s $tf-default;
+$trans-default: all 0.2s $tf-default;
 $border-width: 2px solid;
 
 // Width-Viewports

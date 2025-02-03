@@ -1,50 +1,113 @@
 .header {
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
-
-// .header__menu-title {
-//   font-family: $manrope;
-//   font-size: 14px;
-//   font-weight: 500;
-//   line-height: 14px;
-//   margin: 0;
-//   letter-spacing: 2%;
-//   color: $base-primery;
-
-// }
 
 .header__menu-button {
   position: absolute;
   // position: relative;
-  top: 5px;
-  right: 32px;
-  padding: 4px 5px 4px 15px;
+  top: 19px;
+  right: 15px;
+  padding: 2px 4px 3px 20px;
   width: 136px;
   height: 54px;
   background: $base-white;
   border: 1px solid $base-primery;
   border-radius: 40px;
+  z-index: 5;
+
+  &:hover,
+  &:focus-visible {
+    .header__menu-wrapper {
+      background-color: $base-white;
+    }
+
+    .header__menu span {
+      /* если используется реализация с svg, то вместо span указать svg */
+      background: $base-primery;
+    }
+  }
+
+  &:disabled {
+    .header__menu-wrapper {
+      background-color: $color-disabled;
+    }
+
+    .header__menu {
+      /* если используется реализация с svg, то вместо span указать svg */
+      // background-color: $base-white;
+      opacity: 0.8;
+    }
+  }
+
+  .header__menu-wrapper {
+    background-color: $base-primery;
+  }
 }
 
-// menu is-active
-// .header__menu-button.is-active {
-//   width: 280px;
-//   background: $base-primery;
+/* Active button*/
+.header__menu-button.is-active {
+  .header__menu-title {
+    color: $base-white;
+  }
 
-//   .header__menu-title {
-//     color: $base-white;
-//   }
+  .header__menu-wrapper {
+    background: $base-white;
+  }
 
-//   .header__menu-wrapper {
-//     background: $base-white;
-//   }
+  .header__menu span {
+    background-color: $base-primery;
+  }
 
-//   span {
-//     background-color: $base-primery;
-//   }
-// }
+  &:hover {
+    .header__menu-wrapper {
+      background-color: $base-primery;
+    }
 
+    .header__menu span {
+      /* если используется реализация с svg, то вместо span указать svg */
+      background-color: $base-white;
+    }
+  }
+
+  &:focus-visible {
+    .header__menu-wrapper {
+      background-color: $base-primery;
+    }
+
+    .header__menu span {
+      /* если используется реализация с svg, то вместо span указать svg */
+      background-color: $base-white;
+    }
+  }
+
+  &:active {
+    .header__menu-wrapper {
+      background-color: $base-primery;
+    }
+
+    .header__menu span {
+      /* если используется реализация с svg, то вместо span указать svg */
+      background-color: $base-white;
+    }
+  }
+
+  &:disabled {
+    .header__menu-wrapper {
+      background: $color-disabled;
+    }
+
+    .header__menu span {
+      /* если используется реализация с svg, то вместо span указать svg */
+      background-color: $base-white;
+      opacity: 0.8;
+    }
+  }
+}
 
 .header__menu-wrapper {
   display: flex;
@@ -70,12 +133,13 @@
   span {
     position: absolute;
     left: 50%;
-    width: 18px;
+    width: 15px;
     height: 1px;
     background-color: $base-white;
 
     &:nth-child(1) {
       @include trans-burger-close;
+
       top: 6px;
     }
 
@@ -87,6 +151,7 @@
 
     &:last-child {
       @include trans-burger-close;
+
       top: 14px;
     }
   }
@@ -96,52 +161,133 @@
   span {
     &:nth-child(1) {
       top: 50%;
+      width: 20px;
       transform: translateX(-50%) translateY(0) rotate(45deg);
-      transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87),
-        transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+      transition:
+        top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87),
+        transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s;
     }
 
     &:nth-child(2) {
-      opacity: 0;
-      display: block;
+      visibility: hidden;
     }
 
     &:last-child {
       top: 50%;
+      width: 20px;
       transform: translateX(-50%) translateY(0) rotate(-45deg);
-      transition: bottom .3s cubic-bezier(0.21, 0.83, 0.26, 0.87),
-        transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+      transition:
+        bottom 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87),
+        transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s;
     }
   }
 }
 
+/* Navigation menu*/
 .header__nav {
   position: fixed;
-  // position: absolute;
-  // margin: 10px 30px 0;
-  top: 65px;
-  right: 30px;
-  /*   height: 100vh; */
-  padding: 50px;
-  border-radius: 12px;
+  top: 78px;
+  right: 15px;
+  width: 290px;
+  max-height: 100vh;
+  padding: 33px 25px;
+  border-radius: 15px;
   background-color: $base-primery;
-  transform: translateX(130%);
-  transition: all .2s ease-out;
-}
-
-.header__nav-list {
-  list-style-type: none;
-  text-align: right;
-}
-
-.header__nav-item {
-  padding: 12px 0;
-}
-
-.header__nav-link {
-  color: $base-white;
+  transform: translateX(150%);
+  transition: $trans-default;
+  z-index: 5;
 }
 
 .header__nav.open {
+  overflow-y: auto;
   transform: translateX(0);
+}
+
+.header__nav-list,
+.header__nav-submenu-list {
+  @include list-reset;
+  margin: 0;
+  text-align: left;
+}
+
+.header__nav-submenu-list {
+  display: none;
+  padding: 16px 0 0 16px;
+}
+
+.header__nav-submenu-list.open {
+  transition: $trans-default;
+  display: block;
+}
+
+.header__nav-item {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.header__nav-submenu-item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.header__nav-link {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+}
+
+.header__nav-link,
+.header__nav-submenu-link {
+  color: $color-text-link;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  display: flex;
+  // letter-spacing: 2px;
+  text-align: left;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    color: $base-white;
+  }
+
+  &:focus {
+    color: $base-white;
+    outline: unset;
+  }
+}
+
+
+.header__nav-submenu-link {
+  font-weight: 400;
+  text-transform: unset;
+}
+
+
+.header__nav-link-icon {
+  margin-left: 10px;
+  transition: transform 0.1s linear;
+  stroke: $color-text-link;
+
+  &:hover,
+  &:active {
+    color: $base-white;
+  }
+
+  &:focus {
+    color: $base-white;
+    outline: unset;
+  }
+}
+
+.header__nav-link[aria-expanded="true"] .header__nav-link-icon {
+  transform: rotate(180deg);
+  transition: transform 0.1s linear;
 }
