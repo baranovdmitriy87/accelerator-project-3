@@ -21,6 +21,10 @@
     color: $base-white;
     background: $base-primery;
     outline: unset;
+
+    .button-icon-wrapper {
+      background-color: $base-white;
+    }
   }
 
   &:active {
@@ -35,30 +39,53 @@
     cursor: default;
     background: transparent;
     border: 1px solid $color-disabled;
+
+    .button-icon-wrapper {
+      background-color: $color-disabled;
+    }
+  }
+
+  .button-icon-wrapper {
+    background-color: $base-primery;
   }
 }
 
 .button.is-active {
-  width: 290px;
   color: $base-white;
   background: $base-primery;
+
+  .button-icon-wrapper {
+    background: $base-white;
+  }
 
   &:hover {
     color: $base-primery;
     background: $base-white;
     outline: unset;
+
+    .button-icon-wrapper {
+      background-color: $base-primery;
+    }
   }
 
   &:focus-visible {
     color: $base-primery;
     background: $base-white;
     outline: unset;
+
+    .button-icon-wrapper {
+      background-color: $base-primery;
+    }
   }
 
   &:active {
     background-color: $base-white;
     color: $base-primery;
     opacity: 0.8;
+
+    .button-icon-wrapper {
+      background-color: $base-primery;
+    }
   }
 
   &:disabled {
@@ -67,5 +94,9 @@
     cursor: default;
     border: 1px solid $color-disabled;
     background: $base-primery;
+
+    .button-icon-wrapper {
+      background: $color-disabled;
+    }
   }
 }

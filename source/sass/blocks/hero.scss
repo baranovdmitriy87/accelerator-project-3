@@ -1,0 +1,17 @@
+.hero__container {
+  padding: 0;
+  position: relative;
+  bottom: 75px;
+  display: block;
+}
+
+.hero__container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark-blue;
+  mix-blend-mode: multiply;
+}

@@ -10,7 +10,8 @@ $base-black: rgb(0, 0, 0);
 
 // Other colors
 $color-text: #484848;
-$color-text-link: #f0efe9dc;
+$color-overlay: rgba(13, 29, 51, 0.4);
+$color-text-link: #c1d3ed;
 $color-error: #ff5e66;
 $color-active: #275699;
 $color-disabled: #a9afb7;
@@ -20,6 +21,7 @@ $color-bg-reddit: #ff5722;
 // overlay colors
 $color-grey-blue: rgba(49, 109, 194, 0.2);
 $color-light-grey: rgba(13, 29, 51, 0.4);
+$color-dark-blue: rgba(49, 109, 194, 0.2);
 
 // Animation
 $tf-default: ease-in-out;
