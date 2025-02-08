@@ -6,9 +6,9 @@
   font-weight: 500;
   line-height: 14px;
   margin: 0;
-  letter-spacing: 0.2px;
+  // letter-spacing: 0.2px;
   color: $base-primery;
-
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,6 @@
 
   &:active {
     background-color: $base-primery;
-    // color: $base-white;
     opacity: 0.8;
   }
 
