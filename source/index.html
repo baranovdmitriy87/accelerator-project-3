@@ -27,6 +27,7 @@
   <!-- header -->
 
   <header class="header container">
+    <h1 class="visually-hidden">Intership. Глобальный профессиональный опыт обучения за рубежом.</h1>
     <div class="header__logo-wrapper">
       <svg class="header__logo-icon" width="52" height="52" viewBox="0 0 52 52" role="img" focusable="false"
         aria-hidden="true">
@@ -57,16 +58,16 @@
           </a>
           <ul class="header__nav-submenu-list">
             <li class="header__nav-submenu-item">
-              <a class="header__nav-submenu-link" href="">Стажировки</a>
+              <a class="header__nav-submenu-link" href="#programs">Стажировки</a>
             </li>
             <li class="header__nav-submenu-item">
-              <a class="header__nav-submenu-link" href="">Волонтёрство</a>
+              <a class="header__nav-submenu-link" href="#programs">Волонтёрство</a>
             </li>
             <li class="header__nav-submenu-item">
-              <a class="header__nav-submenu-link" href="">Учёба</a>
+              <a class="header__nav-submenu-link" href="#programs">Учёба</a>
             </li>
             <li class="header__nav-submenu-item">
-              <a class="header__nav-submenu-link" href="">Религия</a>
+              <a class="header__nav-submenu-link" href="#programs">Религия</a>
             </li>
           </ul>
         </li>
@@ -114,6 +115,7 @@
   <!-- main -->
   <main>
     <section class="hero" data-test="hero">
+      <h2 class="visually-hidden">Блок промо</h2>
       <div class="hero__container container">
 
         <div class="hero__image-wrapper">
@@ -133,9 +135,75 @@
       </div>
     </section>
 
+    <!-- programs -->
+    <section class="programs" id="programs" data-test="programs">
+      <h2 class="visually-hidden">Программы обучения</h2>
+      <div class="programs__container container">
+        <ul class="programs__list">
+
+          <li class="programs__item">
+            <div class="programs__icon-wrapper">
+              <svg class="programs__icon" width="18" height="22" viewBox="0 0 18 22" role="img" focusable="false"
+                aria-hidden="true">
+                <use href="/__spritemap#sprite-prostar"></use>
+              </svg>
+            </div>
+            <span class="programs__title">
+              Более 250 программ
+            </span>
+            <p class="programs__desc">
+              учебных и рабочих, разной длительностью от 3 месяцев до 1 года
+            </p>
+          </li>
+          <li class="programs__item">
+            <div class="programs__icon-wrapper">
+              <svg class="programs__icon" width="18" height="22" viewBox="0 0 18 22" role="img" focusable="false"
+                aria-hidden="true">
+                <use href="/__spritemap#sprite-prostar"></use>
+              </svg>
+            </div>
+            <span class="programs__title">
+              Более 3000 участников
+            </span>
+            <p class="programs__desc">
+              уже успешно прошли программу от «Стажировка» и остались в разных странах
+            </p>
+          </li>
+          <li class="programs__item">
+            <div class="programs__icon-wrapper">
+              <svg class="programs__icon" width="18" height="22" viewBox="0 0 18 22" role="img" focusable="false"
+                aria-hidden="true">
+                <use href="/__spritemap#sprite-prostar"></use>
+              </svg>
+            </div>
+            <span class="programs__title">
+              участники из 60 стран
+            </span>
+            <p class="programs__desc">
+              студенты со всего мира приезжают на программу «Стажировки» от 3 месяцев до 1 года
+            </p>
+          </li>
+          <li class="programs__item">
+            <div class="programs__icon-wrapper">
+              <svg class="programs__icon" width="18" height="22" viewBox="0 0 18 22" role="img" focusable="false"
+                aria-hidden="true">
+                <use href="/__spritemap#sprite-prostar"></use>
+              </svg>
+            </div>
+            <span class="programs__title">
+              от 4 200 $</br>до 8 400 $
+            </span>
+            <p class="programs__desc">
+              грант всем участникам для комфортного прохождения программы
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="faq-accordion" data-test="FAQ">
       <div class="faq-accordion__container container">
-        <h2 class="faq-accordion__title">Вопросы и ответы</h2>
+        <h3 class="faq-accordion__title">Вопросы и ответы</h3>
         <ul class="faq-accordion__list" id="accordion">
           <li class="faq-accordion__item">
             <button class="faq-accordion__button button" data-toggle="#faq1">
@@ -249,7 +317,6 @@
   </svg> -->
   <!-- примеры требуемых атрибутов data-test="*" -->
   <!-- <div data-test="about">about</div>
-  <div data-test="programs">programs</div>
   <div data-test="grant">grant</div>
   <div data-test="news">news</div>
   <div data-test="FAQ">FAQ</div>
