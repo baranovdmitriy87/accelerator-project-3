@@ -15,6 +15,7 @@
   border: none;
   cursor: pointer;
   transition: $trans-default;
+  text-transform: uppercase;
 
   &:hover,
   &:focus-visible {
@@ -29,7 +30,7 @@
 
   &:active {
     background-color: $base-primery;
-    opacity: 0.8;
+    color: $color-text-link;
   }
 
   &:disabled {
@@ -79,8 +80,7 @@
 
   &:active {
     background-color: $base-white;
-    color: $base-primery;
-    opacity: 0.8;
+    color: $color-active-bg-blue;
 
     .button-icon-wrapper {
       background-color: $base-primery;

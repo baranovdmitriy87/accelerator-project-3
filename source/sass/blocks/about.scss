@@ -1,0 +1,271 @@
+.about__container {
+  padding: 51px 15px 40px;
+
+  @include vp-768 {
+    padding: 50px 45px 0;
+  }
+
+  @include vp-1440 {
+    padding: 0 100px;
+  }
+}
+
+.about__title {
+  margin: 0;
+  color: $base-primery;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+
+  @include vp-768 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  @include vp-1440 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+.about__container p {
+  margin: 14px 0 40px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  @include vp-768 {
+    margin-top: 31px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @include vp-1440 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+
+.about__content {
+  @include vp-768 {}
+
+  @include vp-1440 {}
+}
+
+.about__content h3 {
+  margin: 0 0 20px 0;
+  color: $base-primery;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+
+  @include vp-768 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @include vp-1440 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.about__content p {
+  width: 530px;
+  margin: 19px 0 30px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  @include vp-768 {
+    width: 500px;
+    margin: 29px 0 40px;
+    font-size: 16px;
+  }
+
+  @include vp-1440 {
+    line-height: 26px;
+  }
+}
+
+.about__button {
+  width: 223px;
+  padding: 2px 4px 3px 20px;
+  height: 44px;
+  background: transparent;
+  border: 1px solid $base-primery;
+  border-radius: 40px;
+  z-index: 5;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+
+  @include vp-768 {
+    width: 279px;
+    height: 56px;
+    padding-left: 30px;
+    letter-spacing: 1.5px;
+  }
+
+  @include vp-1440 {
+    right: 120px;
+  }
+
+  .about__button-icon {
+    color: $base-white;
+    transition: $trans-default;
+  }
+
+  &:hover,
+  &:focus-visible {
+    .about__button-icon-wrapper {
+      background: $base-white;
+    }
+
+    .about__button-icon {
+      color: $base-primery;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    .about__button-icon {
+      color: $color-active-bg-blue;
+    }
+  }
+
+  &:disabled {
+    .about__button-icon-wrapper {
+      background: $color-disabled;
+      opacity: 0.8;
+    }
+  }
+}
+
+.about__button-icon-wrapper {
+  display: flex;
+  background: $base-primery;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-768 {
+    height: 46px;
+    width: 46px;
+  }
+}
+
+.about__list {
+  @include list-reset;
+  margin: 40px 0;
+  padding: 42px 20px 40px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: $base-primery;
+  color: $base-white;
+  border-radius: 20px;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 190px;
+    padding: 72px 50px 50px 70px;
+    gap: 55px 52px;
+
+    margin: 60px 0;
+  }
+
+  @include vp-1440 {
+    grid-template-rows: 162px 142px;
+    padding: 72px 100px 50px 120px;
+    gap: 54px 51px;
+  }
+}
+
+.about__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  padding: 15px 20px;
+  border: 1px solid $base-white;
+  border-radius: 16px;
+
+  @include vp-767 {
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+  }
+
+  @include vp-1440 {
+    flex-direction: row;
+    align-items: center;
+    padding: 42px 40px;
+    gap: 32px;
+  }
+}
+
+.about__item span {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.16px;
+  text-transform: uppercase;
+
+  @include vp-768 {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+
+  @include vp-1440 {
+    width: 170px;
+    margin: 0;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.26px;
+  }
+}
+
+.about__item p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+
+  @include vp-768 {
+    font-size: 16px;
+  }
+
+  @include vp-1440 {
+    width: 201px;
+  }
+}
+
+.about__icon-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 41px;
+  top: -22px;
+  left: -21px;
+  padding: 5px;
+  background-color: $base-primery;
+
+  @include vp-768 {
+    height: 40px;
+    top: -22px;
+    left: -21px;
+  }
+}

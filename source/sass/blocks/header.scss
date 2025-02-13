@@ -1,8 +1,6 @@
 .header {
   padding-top: 20px;
-  position: relative;
-  // top: 0;
-  // right: 0;
+  position: absolute;
   display: flex;
   justify-content: space-between;
 }
@@ -34,31 +32,17 @@
 
   &:hover,
   &:focus-visible {
-
-    // .button-icon-wrapper {
-    //   background-color: $base-white;
-    // }
     .header__menu span {
-      /* если используется реализация с svg, то вместо span указать svg */
       background: $base-primery;
     }
   }
 
   &:disabled {
-
-    // .button-icon-wrapper {
-    //   background-color: $color-disabled;
-    // }
     .header__menu {
       /* если используется реализация с svg, то вместо span указать svg */
-      // background-color: $base-white;
       opacity: 0.8;
     }
   }
-
-  // .button-icon-wrapper {
-  //   background-color: $base-primery;
-  // }
 }
 
 /* Active button*/
