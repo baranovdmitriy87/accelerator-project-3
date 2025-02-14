@@ -1,6 +1,6 @@
+// button default
 .button {
   @include disabled;
-
   font-family: $manrope;
   font-size: 14px;
   font-weight: 500;
@@ -97,5 +97,74 @@
     .button-icon-wrapper {
       background: $color-disabled;
     }
+  }
+}
+
+// button details
+.button-details {
+  background: transparent;
+  border: 1px solid $base-primery;
+  border-radius: 40px;
+  z-index: 5;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+
+  @include vp-768 {
+    width: 279px;
+    height: 56px;
+    padding-left: 30px;
+    letter-spacing: 1.65px;
+  }
+
+  @include vp-1440 {
+    right: 120px;
+  }
+
+  .button-details-icon {
+    color: $base-white;
+    transition: $trans-default;
+  }
+
+  &:hover,
+  &:focus-visible {
+    .button-details-icon-wrapper {
+      background: $base-white;
+    }
+
+    .button-details-icon {
+      color: $base-primery;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    .button-details-icon {
+      color: $color-active-bg-blue;
+    }
+  }
+
+  &:disabled {
+    .button-details-icon-wrapper {
+      background: $color-disabled;
+      opacity: 0.8;
+    }
+  }
+}
+
+.button-details-icon-wrapper {
+  display: flex;
+  background: $base-primery;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-768 {
+    height: 46px;
+    width: 46px;
   }
 }

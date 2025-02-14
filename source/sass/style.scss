@@ -1,7 +1,7 @@
 // VENDOR
 @import "vendor/normalize";
 
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 //  GLOBAL
 @import "./common/variables";
@@ -15,8 +15,9 @@
 @import "./blocks/header";
 @import "./blocks/hero";
 @import "./blocks/faq";
-// @import "./blocks/programs";
+@import "./blocks/programs";
 @import "./blocks/about";
+@import "./blocks/arrows.scss";
 
 // @import "./blocks/reviews";
 // @import "./blocks/contacts";

@@ -6,7 +6,15 @@
   }
 
   @include vp-1440 {
-    padding: 0 100px;
+    padding: 70px 100px;
+  }
+}
+
+.about__content-wrapper {
+  @include vp-1440 {
+    display: grid;
+    grid-template-columns: 702px 498px;
+    gap: 0 40px;
   }
 }
 
@@ -35,7 +43,7 @@
   line-height: 22px;
 
   @include vp-768 {
-    margin-top: 31px;
+    margin: 31px 0 39px 0;
     font-size: 20px;
     line-height: 26px;
   }
@@ -46,14 +54,7 @@
   }
 }
 
-
-.about__content {
-  @include vp-768 {}
-
-  @include vp-1440 {}
-}
-
-.about__content h3 {
+.about__content-target h3 {
   margin: 0 0 20px 0;
   color: $base-primery;
   font-size: 18px;
@@ -71,8 +72,7 @@
   }
 }
 
-.about__content p {
-  width: 530px;
+.about__content-target p {
   margin: 19px 0 30px 0;
   font-size: 14px;
   font-weight: 400;
@@ -80,11 +80,12 @@
 
   @include vp-768 {
     width: 500px;
-    margin: 29px 0 40px;
+    margin: 30px 0 40px;
     font-size: 16px;
   }
 
   @include vp-1440 {
+    margin: 40px 0 50px 0;
     line-height: 26px;
   }
 }
@@ -93,71 +94,6 @@
   width: 223px;
   padding: 2px 4px 3px 20px;
   height: 44px;
-  background: transparent;
-  border: 1px solid $base-primery;
-  border-radius: 40px;
-  z-index: 5;
-
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.3px;
-
-  @include vp-768 {
-    width: 279px;
-    height: 56px;
-    padding-left: 30px;
-    letter-spacing: 1.5px;
-  }
-
-  @include vp-1440 {
-    right: 120px;
-  }
-
-  .about__button-icon {
-    color: $base-white;
-    transition: $trans-default;
-  }
-
-  &:hover,
-  &:focus-visible {
-    .about__button-icon-wrapper {
-      background: $base-white;
-    }
-
-    .about__button-icon {
-      color: $base-primery;
-      transform: rotate(45deg);
-    }
-  }
-
-  &:active {
-    .about__button-icon {
-      color: $color-active-bg-blue;
-    }
-  }
-
-  &:disabled {
-    .about__button-icon-wrapper {
-      background: $color-disabled;
-      opacity: 0.8;
-    }
-  }
-}
-
-.about__button-icon-wrapper {
-  display: flex;
-  background: $base-primery;
-  border-radius: 50%;
-  height: 34px;
-  width: 34px;
-  align-items: center;
-  justify-content: center;
-
-  @include vp-768 {
-    height: 46px;
-    width: 46px;
-  }
 }
 
 .about__list {
@@ -177,7 +113,6 @@
     grid-template-rows: 190px;
     padding: 72px 50px 50px 70px;
     gap: 55px 52px;
-
     margin: 60px 0;
   }
 
@@ -200,9 +135,14 @@
   border-radius: 16px;
 
   @include vp-767 {
+
     &:not(:last-child) {
       margin-bottom: 21px;
     }
+  }
+
+  @include vp-768 {
+    padding-top: 16px;
   }
 
   @include vp-1440 {
@@ -222,6 +162,7 @@
   text-transform: uppercase;
 
   @include vp-768 {
+    margin-bottom: 14px;
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 0.2px;

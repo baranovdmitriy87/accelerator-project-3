@@ -135,25 +135,30 @@
     <!-- about -->
     <section class="about" id="about" data-test="about">
       <div class="about__container container">
-        <h2 class="about__title">О проекте «Стажировка»</h2>
-        <p>«Стажировка» — совместный проект правительств и волонтёрских
-          бригад.
-        </p>
-        <div class="about__content">
-          <h3>Наша цель</h3>
-          <p>Наша деятельность направлена на повышение квалификации молодых специалистов
-            на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем,
-            с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые
-            изменения.
-          </p>
-          <button class="about__button button" type="button">подробнее о проекте
-            <div class="about__button-icon-wrapper">
-              <svg class="about__button-icon" width="8" height="8" viewBox="0 0 8 8" role="img" focusable="false"
-                aria-hidden="true">
-                <use href="/__spritemap#sprite-arrow"></use>
-              </svg>
-            </div>
-          </button>
+
+        <div class="about__content-wrapper">
+          <div class="about__content-project">
+            <h2 class="about__title">О проекте «Стажировка»</h2>
+            <p>«Стажировка» — совместный проект правительств и волонтёрских
+              бригад.
+            </p>
+          </div>
+          <div class="about__content-target">
+            <h3>Наша цель</h3>
+            <p>Наша деятельность направлена на повышение квалификации молодых специалистов
+              на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем,
+              с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые
+              изменения.
+            </p>
+            <button class="about__button button button-details" type="button">подробнее о проекте
+              <div class="about__button-icon-wrapper button-details-icon-wrapper">
+                <svg class="about__button-icon button-details-icon" width="8" height="8" viewBox="0 0 8 8" role="img"
+                  focusable="false" aria-hidden="true">
+                  <use href="/__spritemap#sprite-arrow"></use>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
         <ul class="about__list">
 
@@ -214,6 +219,226 @@
             </p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- programs -->
+    <section class="programs" id="programs" data-test="programs">
+      <div class="programs__container container">
+        <div class="programs__top">
+          <h2 class="programs__header">Программы</h2>
+          <div class="programs__arrows">
+            <button class="programs__prev arrow button" type="button" aria-label="Предыдущий слайд.">
+              <svg class="arrow__icon" width="12" height="12" viewBox="0 0 12 12" role="img" focusable="false"
+                aria-hidden="true">
+                <use href="/__spritemap#sprite-arrow-prev"></use>
+              </svg>
+            </button>
+            <button class="programs__next arrow button" type="button" aria-label="Следующий слайд.">
+              <svg class="arrow__icon" width="12" height="12" viewBox="0 0 12 12" role="img" focusable="false"
+                aria-hidden="true">
+                <use href="/__spritemap#sprite-arrow-next"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="programs__slider swiper-container">
+          <ul class="programs__list swiper-wrapper">
+
+            <li class="programs__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/programs/program-desktop-slide-01.webp 1x, ./img/programs/program-desktop-slide-01@2x.webp 2x"
+                  width="392" height="420">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/programs/program-tablet-slide-01.webp 1x, ./img/programs/program-tablet-slide-01@2x.webp 2x"
+                  width="324" height="420">
+                <img class="programs__img" src="./img/programs/program-mobile-slide-01.jpg"
+                  alt="Две женщины работают в планшете." width="290" height="400"
+                  srcset="./img/programs/program-mobile-slide-01@2x.jpg 2x" loading="lazy">
+              </picture>
+
+              <div class="programs__content">
+                <h4 class="programs__content-title">Стажировки</h4>
+                <div class="programs__content-desc">
+                  <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  <a class="programs__link button" href="">
+                    <svg class="programs__link-icon" width="8" height="8" viewBox="0 0 8 8" role="img" focusable="false"
+                      aria-hidden="true">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/programs/program-desktop-slide-02.webp 1x, ./img/programs/program-desktop-slide-02@2x.webp 2x"
+                  width="392" height="420">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/programs/program-tablet-slide-02.webp 1x, ./img/programs/program-tablet-slide-02@2x.webp 2x"
+                  width="324" height="420">
+                <img class="programs__img" src="./img/programs/program-mobile-slide-02.jpg"
+                  alt="Парень-волонтер в синей футболке." width="290" height="400"
+                  srcset="./img/programs/program-mobile-slide-02@2x.jpg 2x" loading="lazy">
+              </picture>
+
+              <div class="programs__content">
+                <h4 class="programs__content-title">Волонтёрство</h4>
+                <div class="programs__content-desc">
+                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                  <a class="programs__link button" href="">
+                    <svg class="programs__link-icon" width="8" height="8" viewBox="0 0 8 8" role="img" focusable="false"
+                      aria-hidden="true">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/programs/program-desktop-slide-03.webp 1x, ./img/programs/program-desktop-slide-03@2x.webp 2x"
+                  width="392" height="420">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/programs/program-tablet-slide-03.webp 1x, ./img/programs/program-tablet-slide-03@2x.webp 2x"
+                  width="324" height="420">
+                <img class="programs__img" src="./img/programs/program-mobile-slide-03.jpg"
+                  alt="Две женщины работают в планшете." width="290" height="400"
+                  srcset="./img/programs/program-mobile-slide-03@2x.jpg 2x" loading="lazy">
+              </picture>
+
+              <div class="programs__content">
+                <h4 class="programs__content-title">Учёба</h4>
+                <div class="programs__content-desc">
+                  <p>Получите образование и измените своё будущее.</p>
+                  <a class="programs__link button" href="">
+                    <svg class="programs__link-icon" width="8" height="8" viewBox="0 0 8 8" role="img" focusable="false"
+                      aria-hidden="true">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/programs/program-desktop-slide-01.webp 1x, ./img/programs/program-desktop-slide-01@2x.webp 2x"
+                  width="392" height="420">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/programs/program-tablet-slide-01.webp 1x, ./img/programs/program-tablet-slide-01@2x.webp 2x"
+                  width="324" height="420">
+                <img class="programs__img" src="./img/programs/program-mobile-slide-01.jpg"
+                  alt="Две женщины работают в планшете." width="290" height="400"
+                  srcset="./img/programs/program-mobile-slide-01@2x.jpg 2x" loading="lazy">
+              </picture>
+
+              <div class="programs__content">
+                <h4 class="programs__content-title">Стажировки</h4>
+                <div class="programs__content-desc">
+                  <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  <a class="programs__link button" href="">
+                    <svg class="programs__link-icon" width="8" height="8" viewBox="0 0 8 8" role="img" focusable="false"
+                      aria-hidden="true">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/programs/program-desktop-slide-02.webp 1x, ./img/programs/program-desktop-slide-02@2x.webp 2x"
+                  width="392" height="420">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/programs/program-tablet-slide-02.webp 1x, ./img/programs/program-tablet-slide-02@2x.webp 2x"
+                  width="324" height="420">
+                <img class="programs__img" src="./img/programs/program-mobile-slide-02.jpg"
+                  alt="Парень-волонтер в синей футболке." width="290" height="400"
+                  srcset="./img/programs/program-mobile-slide-02@2x.jpg 2x" loading="lazy">
+              </picture>
+
+              <div class="programs__content">
+                <h4 class="programs__content-title">Волонтёрство</h4>
+                <div class="programs__content-desc">
+                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                  <a class="programs__link button" href="">
+                    <svg class="programs__link-icon" width="8" height="8" viewBox="0 0 8 8" role="img" focusable="false"
+                      aria-hidden="true">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/programs/program-desktop-slide-03.webp 1x, ./img/programs/program-desktop-slide-03@2x.webp 2x"
+                  width="392" height="420">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/programs/program-tablet-slide-03.webp 1x, ./img/programs/program-tablet-slide-03@2x.webp 2x"
+                  width="324" height="420">
+                <img class="programs__img" src="./img/programs/program-mobile-slide-03.jpg"
+                  alt="Две женщины работают в планшете." width="290" height="400"
+                  srcset="./img/programs/program-mobile-slide-03@2x.jpg 2x" loading="lazy">
+              </picture>
+
+              <div class="programs__content">
+                <h4 class="programs__content-title">Учёба</h4>
+                <div class="programs__content-desc">
+                  <p>Получите образование и измените своё будущее.</p>
+                  <a class="programs__link button" href="">
+                    <svg class="programs__link-icon" width="8" height="8" viewBox="0 0 8 8" role="img" focusable="false"
+                      aria-hidden="true">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/programs/program-desktop-slide-01.webp 1x, ./img/programs/program-desktop-slide-01@2x.webp 2x"
+                  width="392" height="420">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/programs/program-tablet-slide-01.webp 1x, ./img/programs/program-tablet-slide-01@2x.webp 2x"
+                  width="324" height="420">
+                <img class="programs__img" src="./img/programs/program-mobile-slide-01.jpg"
+                  alt="Две женщины работают в планшете." width="290" height="400"
+                  srcset="./img/programs/program-mobile-slide-01@2x.jpg 2x" loading="lazy">
+              </picture>
+
+              <div class="programs__content">
+                <h4 class="programs__content-title">Стажировки</h4>
+                <div class="programs__content-desc">
+                  <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  <a class="programs__link button" href="">
+                    <svg class="programs__link-icon" width="8" height="8" viewBox="0 0 8 8" role="img" focusable="false"
+                      aria-hidden="true">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <button class="programs__button button button-details" type="button">все программы
+          <div class="programs__button-icon-wrapper button-details-icon-wrapper">
+            <svg class="programs__button-icon button-details-icon" width="8" height="8" viewBox="0 0 8 8" role="img"
+              focusable="false" aria-hidden="true">
+              <use href="/__spritemap#sprite-arrow"></use>
+            </svg>
+          </div>
+        </button>
       </div>
     </section>
 
@@ -337,7 +562,7 @@
   <div data-test="grant">grant</div>
   <div data-test="news">news</div>
   <div data-test="FAQ">FAQ</div>
-  <div data-test="reviews">reviews</div>
+  <div data-test="programs">programs</div>
   <div data-test="contacts">contacts</div>
   <div data-test="form">form</div>
   <div data-test="footer">footer</div> -->
