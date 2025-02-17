@@ -112,17 +112,6 @@
   line-height: 20px;
   letter-spacing: 0.3px;
 
-  @include vp-768 {
-    width: 279px;
-    height: 56px;
-    padding-left: 30px;
-    letter-spacing: 1.65px;
-  }
-
-  @include vp-1440 {
-    right: 120px;
-  }
-
   .button-details-icon {
     color: $base-white;
     transition: $trans-default;

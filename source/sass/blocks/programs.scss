@@ -1,5 +1,16 @@
+.programs {
+  @include vp-768 {
+    overflow: hidden;
+  }
+}
+
 .programs__container {
-  padding: 50px 15px;
+  position: relative;
+  padding: 41px 15px 50px;
+
+  @include vp-768 {
+    padding: 51px 45px;
+  }
 }
 
 .programs__top {
@@ -7,10 +18,10 @@
   justify-content: space-between;
   height: 50px;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @include vp-768 {
-    margin: 0 0 -6px;
+    margin: 2px 0 43px;
   }
 }
 
@@ -20,43 +31,12 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
+
+  @include vp-768 {
+    font-size: 34px;
+    line-height: 50px;
+  }
 }
-
-//   &::before {
-//     content: attr(data-shadow);
-//     position: absolute;
-//     bottom: 12px;
-//     left: 0;
-//     font-size: 26px;
-//     font-weight: 800;
-
-//     color: $color-active;
-//     opacity: 0.2;
-
-//     @include vp-768 {
-//       top: -4px;
-//       font-size: 26px;
-//       line-height: 26px;
-//     }
-
-//     @include vp-1440 {
-//       top: -25px;
-//       font-size: 55px;
-//     }
-//   }
-
-//   @include vp-768 {
-//     margin: 0 0 42px;
-//     font-size: 25px;
-//     line-height: 25px;
-//   }
-
-//   @include vp-1440 {
-//     font-size: 35px;
-//     line-height: 35px;
-//     margin: 0 0 44px -10px;
-//   }
-// }
 
 .programs__img {
   border-radius: 10px;
@@ -70,8 +50,11 @@
 
 
   @include vp-768 {
+    position: absolute;
     display: flex;
     margin: 0;
+    bottom: 71px;
+    right: 46px;
   }
 
   @include vp-1440 {
@@ -79,10 +62,87 @@
   }
 }
 
+
+
+
+// .custom-scrollbar {
+//   width: 100%;
+//   height: 4px;
+//   margin-top: 20px;
+// }
+
+// .scrollbar-track {
+//   position: relative;
+//   height: 100%;
+//   background: #eee;
+// }
+
+// .scrollbar-thumb {
+//   position: absolute;
+//   height: 100%;
+//   background: #333;
+//   transition: all 0.3s;
+// }
+
+
+
+
 .programs__slider {
   overflow: hidden;
   margin-bottom: 30px;
+
+  @include vp-768 {
+    overflow: visible;
+  }
+
+  @include vp-1440 {
+    overflow: hidden;
+  }
 }
+
+.programs__scrollbar-wrapper {
+  @include vp-767 {
+    display: none;
+  }
+
+  @include vp-768 {
+    max-width: 562px;
+    margin-top: 50px;
+  }
+
+  @include vp-1440 {
+    min-width: 1000px;
+  }
+}
+
+.programs__scrollbar {
+  // position: relative;
+  background-color: #abc0db;
+  height: 2px;
+  visibility: visible;
+  margin-top: 10px;
+
+  .swiper-scrollbar-drag {
+    width: unset;
+  }
+
+  .programs__scrollbar-drag {
+    width: 400px;
+    background-color: $base-primery;
+    height: 2px;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+}
+
+.programs__scrollbar .programs__scrollbar-drag {
+  width: 400px;
+  background-color: $base-primery;
+  height: 2px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
 
 .programs__list {
   @include list-reset;
@@ -101,7 +161,7 @@
   border-radius: 10px;
   width: 290px;
   height: 400px;
-  padding: 20px 10px;
+  padding: 18px 10px;
   margin-right: 32px;
 
   >picture {
@@ -116,20 +176,17 @@
       mix-blend-mode: multiply;
       border-radius: 10px;
     }
+  }
 
-    @include vp-768 {
-      // flex-direction: row;
-      // max-width: 565px;
-      // // padding: 20px;
-      // height: min-content;
+  @include vp-768 {
+    height: 420px;
+    padding-bottom: 10px;
+  }
 
-    }
+  @include vp-1440 {
+    // max-width: 700px;
+    // padding-right: 30px;
 
-    @include vp-1440 {
-      // max-width: 700px;
-      // padding-right: 30px;
-
-    }
   }
 }
 
@@ -150,15 +207,14 @@
 }
 
 .programs__content {
-  width: 271px;
+  width: 270px;
   display: flex;
   flex-direction: column;
-  padding: 14px 0 0;
   z-index: 5;
 
 
   @include vp-768 {
-    // width: 300px;
+    width: 284px;
     padding-top: 4px;
   }
 
@@ -168,27 +224,10 @@
   }
 }
 
-.programs__content-desc {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 12px 18px;
-  border-radius: 0 12px 12px 12px;
-
-  p {
-    width: 190px;
-    margin: 0;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14px;
-  }
-}
-
 .programs__content-title {
   position: relative;
   padding: 18px 34px 7px 18px;
-  width: 147px;
+  width: 146px;
   margin: 0;
   color: #316dc2;
   font-size: 16px;
@@ -203,6 +242,44 @@
     bottom: -3px;
     right: -18px;
     background-color: transparent;
+
+    @include vp-768 {
+      bottom: 0;
+    }
+  }
+
+  @include vp-768 {
+    font-size: 20px;
+    line-height: 14px;
+    padding: 19px 9px 5px 18px;
+    width: 173px;
+  }
+}
+
+.programs__content-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 12px 18px 14px;
+  border-radius: 0 12px 12px 12px;
+
+  @include vp-768 {
+    padding: 12px 18px 15px;
+  }
+
+  p {
+    width: 190px;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+
+    @include vp-768 {
+      width: 195px;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -244,12 +321,26 @@
 
 .programs__button {
   width: 205px;
-  padding: 3px 4px 3px 30px;
+  padding: 4px 4px 3px 30px;
   height: 44px;
   font-size: 12px;
   font-weight: 500;
   line-height: 12px;
   letter-spacing: 0.24px;
+
+  @include vp-768 {
+    position: absolute;
+    top: 50px;
+    right: 45px;
+    width: 234px;
+    height: 56px;
+    padding-left: 30px;
+    letter-spacing: 1.65px;
+  }
+
+  @include vp-1440 {
+    right: 120px;
+  }
 }
 
 .programs__arrow-icon {

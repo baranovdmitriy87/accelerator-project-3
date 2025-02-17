@@ -1,4 +1,5 @@
 .header {
+  width: 100%;
   padding-top: 20px;
   position: absolute;
   display: flex;
@@ -6,12 +7,11 @@
 }
 
 .header__logo-wrapper {
-  z-index: 2;
+  z-index: 5;
 }
 
 .header__menu-button {
   position: absolute;
-  // position: relative;
   top: 19px;
   right: 15px;
   padding: 2px 4px 3px 20px;
@@ -39,7 +39,6 @@
 
   &:disabled {
     .header__menu {
-      /* если используется реализация с svg, то вместо span указать svg */
       opacity: 0.8;
     }
   }
@@ -53,54 +52,33 @@
     color: $base-white;
   }
 
-  // .button-icon-wrapper {
-  //   background: $base-white;
-  // }
-
   .header__menu span {
     background-color: $base-primery;
   }
 
   &:hover {
-    // .button-icon-wrapper {
-    //   background-color: $base-primery;
-    // }
-
     .header__menu span {
-      /* если используется реализация с svg, то вместо span указать svg */
       background-color: $base-white;
     }
   }
 
   &:focus-visible {
-    // .button-icon-wrapper {
-    //   background-color: $base-primery;
-    // }
 
     .header__menu span {
-      /* если используется реализация с svg, то вместо span указать svg */
       background-color: $base-white;
     }
   }
 
   &:active {
-    // .button-icon-wrapper {
-    //   background-color: $base-primery;
-    // }
 
     .header__menu span {
-      /* если используется реализация с svg, то вместо span указать svg */
       background-color: $base-white;
     }
   }
 
   &:disabled {
-    // .button-icon-wrapper {
-    //   background: $color-disabled;
-    // }
 
     .header__menu span {
-      /* если используется реализация с svg, то вместо span указать svg */
       background-color: $base-white;
       opacity: 0.8;
     }

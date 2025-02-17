@@ -114,10 +114,10 @@
  .swiper-css-mode {
    > .swiper-wrapper {
      overflow: auto;
-     scrollbar-width: none; /* For Firefox */
-     -ms-overflow-style: none; /* For Internet Explorer and Edge */
+     scrollbar-width: block; /* For Firefox */
+     -ms-overflow-style: block; /* For Internet Explorer and Edge */
      &::-webkit-scrollbar {
-       display: none;
+       display: block;
      }
    }
    > .swiper-wrapper > .swiper-slide {
